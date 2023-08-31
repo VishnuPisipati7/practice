@@ -4,47 +4,22 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 
 public class SpringbootApplication {
 
 	public static void main(String[] args) {
-		String reverse = "Hello World";
-		System.out.println(reverseString(reverse));
+	//initialize an arrayList
+	List<Integer> v0 = new ArrayList<Integer>();
+	List<Integer> v1 = null;
 
+	Integer[] a = {1,2,3,4,5};
+	v1 = new ArrayList<>(Arrays.asList(a));
 
-		SpringApplication.run(SpringbootApplication.class, args);
 	}
-
-
-//calling function recursively
-
-
-	public static String reverseString(String str) {
-		if (str.isEmpty())
-			return str;
-		// Calling Function Recursively
-		return reverseString(str.substring(1)) + str.charAt(0);
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
